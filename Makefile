@@ -8,7 +8,7 @@ CFLAGS := -Wall -g
 SRCDIR := src
 
 # Define the target executable name
-TARGET := chitchat
+TARGET := YourStory
 
 # Find the main.c file in the source directory
 MAIN_SOURCE := $(SRCDIR)/main.c
