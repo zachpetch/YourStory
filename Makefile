@@ -1,25 +1,15 @@
-# Define the compiler
 CC := gcc
-
-# Define any compile-time flags
-CFLAGS := -Wall -g
-
-# Define the source directory
+CFLAGS := -Wall -g `pkg-config --cflags gtk4`
+LIBS := `pkg-config --libs gtk4`
 SRCDIR := src
-
-# Define the target executable name
 TARGET := YourStory
-
-# Find the main.c file in the source directory
 MAIN_SOURCE := $(SRCDIR)/main.c
 
 # Default target
 $(TARGET): $(MAIN_SOURCE)
-	@$(CC) $(CFLAGS) $< -o $@
+	@$(CC) $(CFLAGS) $< -o $@ $(LIBS)
 	@echo "Compiled $< successfully!"
 
-# Clean target
 clean:
 	@rm -f $(TARGET)
 	@echo "Cleanup complete!"
-
