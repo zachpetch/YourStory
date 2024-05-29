@@ -40,7 +40,7 @@ int main() {
     printf("Long ago, in the land of %s, there lived a young ...\n", place);
 
     usleep(sleeper);
-    
+
     printf("Hmm...\n");
 
     usleep(sleeper);
